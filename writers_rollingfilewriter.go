@@ -166,7 +166,7 @@ func (rollfileWriter *rollingFileWriter) getFileName() string {
 	if rollfileWriter.rollingType == rollingTypeSize {
 		return rollfileWriter.fileName
 	} else if rollfileWriter.rollingType == rollingTypeDate {
-		return time.Now().Format(rollfileWriter.datePattern) + " " + rollfileWriter.fileName
+		return time.Now().Format(rollfileWriter.datePattern) + "_" + rollfileWriter.fileName
 	}
 
 	return rollfileWriter.fileName
